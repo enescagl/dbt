@@ -1,0 +1,103 @@
+[
+  {
+    "postgresql": "BYTEA",
+    "mssql": "BINARY(n)",
+    "has_length": true
+  },
+  {
+    "postgresql": "BOOLEAN",
+    "mssql": "BIT",
+    "has_length": true
+  },
+  {
+    "postgresql": "TIMESTAMP(3)",
+    "mssql": "DATETIME",
+    "has_length": true
+  },
+  {
+    "postgresql": "TIMESTAMP(p)",
+    "mssql": "DATETIME2(p)",
+    "has_length": true
+  },
+  {
+    "postgresql": "TIMESTAMP(p) WITH TIME ZONE",
+    "mssql": "DATETIMEOFFSET(p)",
+    "has_length": true
+  },
+  {
+    "postgresql": "DOUBLE PRECISION",
+    "mssql": "IMAGE",
+    "has_length": false
+  },
+  {
+    "postgresql": "CHAR(n)",
+    "mssql": "NCHAR(n)",
+    "has_length": true
+  },
+  {
+    "postgresql": "TEXT",
+    "mssql": "NTEXT",
+    "has_length": false
+  },
+  {
+    "postgresql": "VARCHAR(n)",
+    "mssql": "NVARCHAR(n)",
+    "has_length": true
+  },
+  {
+    "postgresql": "TEXT",
+    "mssql": "NVARCHAR(max)",
+    "has_length": false
+  },
+  {
+    "postgresql": "BYTEA",
+    "mssql": "ROWVERSION",
+    "has_length": false
+  },
+  {
+    "postgresql": "TIMESTAMP(0)",
+    "mssql": "SMALLDATETIME",
+    "has_length": false
+  },
+  {
+    "postgresql": "MONEY",
+    "mssql": "SMALLMONEY",
+    "has_length": false
+  },
+  {
+    "postgresql": "BYTEA",
+    "mssql": "TIMESTAMP",
+    "has_length": false
+  },
+  {
+    "postgresql": "SMALLINT",
+    "mssql": "TINYINT",
+    "has_length": false
+  },
+  {
+    "postgresql": "CHAR(16)",
+    "mssql": "UNIQUEIDENTIFIER",
+    "has_length": false
+  },
+  {
+    "postgresql": "SMALLINT",
+    "mssql": "TINYINT",
+    "has_length": false
+  },
+  {
+    "postgresql": "BYTEA",
+    "mssql": "VARBINARY(n)",
+    "has_length": true
+  },
+  {
+    "postgresql": "BYTEA",
+    "mssql": "VARBINARY(max)",
+    "has_length": false
+  },
+  {
+    "postgresql": "VARCHAR(max)",
+    "mssql": "TEXT",
+    "has_length": false
+  }
+]
+

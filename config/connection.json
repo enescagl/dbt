@@ -1,0 +1,17 @@
+[
+  {
+    "from": "postgresql://postgres:123456789a@localhost/bekra",
+    "to": "mssql+pyodbc://sa:123456789a@DESKTOP-G334H64\\SQLEXPRESS/bekra?driver=ODBC+Driver+17+for+SQL+Server"
+    "transferType": "shape"
+  },
+  {
+    "from": "oracle+cx_oracle://oradmin:123456789a@localhost/?service_name=pdbbekratest",
+    "to": "postgresql://postgres:123456789a@localhost/bekra",
+    "transferType": "data"
+  },
+  {
+    "from": "oracle+cx_oracle://oradmin:123456789a@localhost/?service_name=pdbbekratest",
+    "to": "postgresql://postgres:123456789a@localhost/bekra",
+    "transferType": "data"
+  }
+]

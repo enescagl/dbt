@@ -1,0 +1,156 @@
+{
+  "name": "bekra_aktarım",
+  "from_engine_connection": "oracle+cx_oracle://oradmin:123456789a@localhost/?service_name=pdbbekratest",
+  "to_engine_connection": "postgresql://postgres:123456789a@localhost/bekra",
+  "flows": [
+    {
+      "id": 1,
+      "matches": [
+        {
+          "to_table": "BildirimKimyasallar",
+          "from_tables": [
+            {
+              "table_left": "BILDIRIM_KIMYASAL",
+              "table_right": "KIMYASAL3",
+              "join_on_left": "FK_KIMYASAL_ID",
+              "join_on_right": "KIMYASAL3_ID"
+            }
+          ],
+          "column_pairs": {
+            "Id": "BILDIRIM_KIMYASAL_ID",
+            "BildirimId": "FK_BILDIRIM_ID",
+            "KimyasalTabloTipi": "KIMYASAL_TABLO_TIPI",
+            "Miktar": "MIKTAR",
+            "AdlandirilmisMaddeAlt": "ADLANDIRILMIS_MADDEKAT_ALT",
+            "AdlandirilmisMaddeUst": "ADLANDIRILMIS_MADDEKAT_UST",
+            "ToksisiteIndeksiAlt": "TOKSISITE_INDEKSI_ALT",
+            "ToksisiteIndeksiUst": "TOKSISITE_INDEKSI_UST",
+            "EkolojikToksisiteIndeksiAlt": "EKOTOKSISITE_INDEKSI_ALT",
+            "EkolojikToksisiteIndeksiUst": "EKOTOKSISITE_INDEKSI_UST",
+            "AlevlenirlikAlt": "ALEVLENIRLIK_ALT",
+            "AlevlenirlikUst": "ALEVLENIRLIK_UST",
+            "SaglikAlt": "SAGLIK_ALT",
+            "SaglikUst": "SAGLIK_UST",
+            "FizikselAlt": "FIZIKSEL_ALT",
+            "FizikselUst": "FIZIKSEL_UST",
+            "CevreselAlt": "CEVRESEL_ALT",
+            "CevreselUst": "CEVRESEL_UST",
+            "DigerAlt": "DIGER_ALT",
+            "DigerUst": "DIGER_UST",
+            "MaddeIdler": "MADDE_ID",
+            "MaddeCevaplari": "MADDE_CEVAPLARI",
+            "HesaplanmisMetin": "CALCULATEDTEXT",
+            "AdiEn": "ENG_NAME",
+            "AdiTr": "TR_NAME",
+            "TRNumarasi": "INDEX_NUMBER",
+            "ECNumarasi": "EC_NO",
+            "CASNumarasi": "CAS_NO",
+            "Notlar": "NOTES",
+            "AdlandirilmisMaddeId": "NAMED_SUBSTANCE_ID",
+            "KonsantrasyonSinirlari": "",
+            "Mustahzar": "",
+            "MustahzarNotlari": "MUSTAHZAR_NOTLARI",
+            "CarpimFaktoru": "M_FACTOR",
+            "ZararlilikSinifAdlari": "HAZARD_STAT",
+            "ZararlilikSiniflari": "HAZARD_CLASS",
+            "ZaralilikSinifEtiketleri": "",
+            "Piktogram": "PICTOGRAM",
+            "TamamlayiciZaralilikSiniflari": "SUPPL_HAZARD",
+            "DigerO1Alt": "",
+            "DigerO1Ust": "",
+            "DigerO2Alt": "",
+            "DigerO2Ust": "",
+            "DigerO3Alt": "",
+            "DigerO3Ust": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "matches": [
+        {
+          "to_table": "Bildirimler",
+          "from_tables": [
+            {
+              "table_left": "BILDIRIM"
+            }
+          ],
+          "column_pairs": {
+            "Id": "BILDIRIM_ID",
+            "TesisId": "FK_COB_TESIS_ID",
+            "Tarih": "TARIH",
+            "Kategori": "KATEGORI",
+            "Metin": "MADDE_METIN",
+            "Gonderildi": "GONDERILDI",
+            "Versiyon": "VERSIYON",
+            "H_Kategori": "B_KATEGORI",
+            "TCKN": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "matches": [
+        {
+          "to_table": "Tesisler",
+          "from_tables": [
+            {
+              "table_left": "COB_TESIS"
+            }
+          ],
+          "column_pairs": {
+            "Id": "ID",
+            "Adi": "TESIS_ADI",
+            "Adresi": "TESIS_ADRESI",
+            "Il": "TESIS_IL",
+            "Ilce": "TESIS_ILCE",
+            "Telefon": "TESIS_TELEFON",
+            "Eposta": "TESIS_EMAIL",
+            "VergiNo": "TESIS_VERGINO",
+            "VergiDairesi": "TESIS_VERGIDAIRESI",
+            "Koordinat": "TESIS_KOORDINAT",
+            "Pasif": "",
+            "SonBildirimId": "",
+            "SanayiTipi": "",
+            "CevreBilgisi": "",
+            "YerTipi": "",
+            "YerAciklama": "",
+            "KiyiKurulusuMu": "",
+            "FaaliyetDurum": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "matches": [
+        {
+          "to_table": "ReferansListe",
+          "from_tables": [
+            {
+              "table_left": "KIMYASAL3"
+            }
+          ],
+          "column_pairs": {
+            "Id": "KIMYASAL3_ID",
+            "TrNumarasi": "INDEX_NUMBER",
+            "AdiEn": "ENG_NAME",
+            "AdiTr": "TR_NAME",
+            "Notlar": "NOTES",
+            "ECNumarasi": "EC_NO",
+            "CASNumarasi": "CAS_NO",
+            "ZararlilikSiniflari": "HAZARD_CLASS",
+            "ZararlilikSinifAdlari": "HAZARD_STAT",
+            "Piktogram": "PICTOGRAM",
+            "EtiketSiniflari": "LABELING_HAZARD_STAT",
+            "TamamlayiciSiniflar": "SUPPL_HAZARD",
+            "CarpimFaktoru": "M_FACTOR",
+            "AdlandirilmisMaddelerId": "NAMED_SUBSTANCE_ID"
+          }
+        }
+      ]
+    }
+  ]
+}
